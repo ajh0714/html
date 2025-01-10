@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>폼 양식 만들기</h1>
+    <h2>로그인폼, 회원가입, 글쓰기, 주문서 작성폼...</h2>
+    <pre>
+        text: 한줄의 문자열입력, 아이디,이름 ,주소 ,글제목,연락처....
+        name: 백엔드 서버로 데이터를 가져갈때 필요한 변수
+        value: 박스에 입력한 값을 가지는 속성성
+        placeholder : 안내 메시지표시시
+        readonly : 읽기전용
+        disabled : 비활성화
+        size : 박스크기기
+    </pre>
+    <form method="post" action="a.jsp">
+        아이디 : <input type="text" name="userid" value="gildong" placeholder="아이디입력" readonly><br/>
+        비밀번호 : <input type="password" name="userpassword"><br/>
+        이름 : <input type="text" name="username" placeholder="이름을 입력하세요" disabled/><br/>
+        주소 : <input type="text" name="addr" size="10" minlength="5" maxlength="12"><br/>
+        이메일 : <input type="email" name="email"><br/>
+        성별 : <input type="radio" value="M" name="gender" checked> 남
+               <input type="radio" value="F" name="gender"> 여<br/>
+        취미 : <input type="checkbox" value="등산"> 등산
+                <input type="checkbox"value="걷기"> 걷기
+                <input type="checkbox"value="달리기"> 달리기
+                <input type="checkbox"value="자전거"> 자전거
+                <input type="checkbox"value="쇼핑"> 쇼핑<br/>
+        메모 : <textarea name="memo" rows="5" cols="50">글내용용</textarea><br/>
+        관심분야 : <select name="interest" size="3" multiple>
+                        <option value="not">==선택==</option>
+                        <option value="cycle">싸이클</option>
+                        <option>영화감상</option>
+                        <option>웹툰</option>
+                        <option>컴퓨터</option>
+                        <option selected>게임</option>
+        </select><br/>
+        관심과목 : <select name="language">
+                    <optgroup label="frontend">
+                        <option>HTML</option>
+                        <option>CSS</option>
+                        <option>JAVASCRIPT</option>
+                    </optgroup>
+                    <optgroup label="백엔드">
+                        <option>JSP</option>
+                        <option>Spring</option>
+                        <option>Springboot</option>
+                    </optgroup>
+        </select>
+        <br/>
+        파일첨부 : <input type="file" name="filename" multiple><br/>
+        숨김데이터 : <input type="hidden" name="no" value="1234"><br/>
+        숫자만 입력 : <input type="number" name="num" min="1" max="10" step="2"><br/>
+        범위입력 : <input type ="range" min="1" max="10" value="5"><br/>
+        date : <input type="date" name="date1"><br/>
+        datetime-local : <input type="datetime-local" name="date2"><br/>
+        month : <input type="month" name="date3"><br/>
+        week : <input type="week" name="date4"><br/>
+        color : <input type="color" name="clr"><br/>
+        <hr/>
+        <input type="submit" value="전송하기">
+        <input type="reset" value="초기화">
+        <input type="button" value="전송하기" onclick="alert('버튼이 클릭되었습니다.')">
+        <input type="image" src="../img/button.png">
+    </form>
+</body>
+</html>

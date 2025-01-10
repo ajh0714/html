@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #viewer{
+            width: 200px; height: 200px; background-color: aquamarine; border-radius: 200px;
+            font-size: 5em; line-height: 200px; margin: 0 auto; text-align: center;
+        }
+    </style>
+    <script>
+        var num = 1;
+        var timer;
+        function changeNumber(){
+            document.getElementById("viewer").innerHTML = num++;
+        }
+        function start(){
+            /*
+                setInterval("호출할 함수명", 호출간격(밀리초));
+            */
+            timer = setInterval("changeNumber()",1000);
+        }
+        function stopNumber(){
+            //현재 진행중인 인터벌 지우기
+            clearInterval(timer); 
+        }
+        var i=2;
+        function changeImage(){
+            document.getElementById("img").src = "../img/다운로드 ("+i++ +").jpeg";
+            if(i>6) i=2;
+        }
+    </script>
+</head>
+<body onload="start();setInterval('changeImage()',2000)">
+    <h1>setInterval : 일정한 시간 간격으로 함수를 호출하여 규칙으로 실행되도록 한다.</h1>
+    <div id ="viewer" onmouseover="stopNumber()" onmouseout="start();"></div>
+    <div>
+        <img id="img" src="../img/다운로드 (2).jpeg" style="width: 200px; height: 200px;"/>
+    </div>
+</body>
+</html>

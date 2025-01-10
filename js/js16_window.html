@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        img{width:100%;}
+        #menu{position: fixed; }
+    </style>
+    <script>
+        //창띄우기
+        var w;
+        function winOpen(){
+            //팝업띄우기
+            //창이름이 있으면 1개만 창이 뜸
+            //         표시할 내용, 창이름, 옵션
+           w = window.open("popup.html","win","width=500,height=500px, left=100px, top=200px");
+        }
+        function winClose(){
+            w.close(); // 팝업창 닫기
+            //window.close();//현재창 닫기
+            self.close();
+        }
+        function winMove(){
+            //moveTo() : 절대좌표
+           // w.movoTO(300,300);
+            //moveBy(x,y) : 상대좌표
+            w.moveBy(20,-20);
+        }
+        function winSize(){
+            // resizeTo() : 절대 크기
+            //w.resizeTo(300,300);
+            // resizeBy() : 상대 크기
+            w.resizeBy(10,10);
+        }
+        function winScroll(){
+            //scrollto() : 절대위치
+            //window.scrollTo(0,1000);
+            //scrollby() : 상대 위치
+            window.scrollBy(0,10);
+        }
+        function getWindowInfo(){
+            var tag = "<ol>";
+            tag += "<li>윈도우 x좌표=" + window.screenX+"</li>";
+            tag += "<li>윈도우 y좌표=" + window.screenY+"</li>";
+            /*항의 폭과 높이*/
+            tag +="<li>윈도우 폭=" + window.outerWidth+"</li>"
+            tag +="<li>윈도우 높이="+window.outerHeight+"</li>"
+
+             tag +="<li>윈도우 폭=" + window.innerWidth+"</li>"
+            tag +="<li>윈도우 높이="+window.innerHeight+"</li>"
+
+            /*스크롤바의 위치*/
+            tag += "<li>스크롤바 x위치="+window.scrollX+"</li>";
+            tag += "<li>스크롤바 y위치="+window.scrollY+"</li>"
+            document.getElementById("winInfo").innerHTML = tag+"</ol>";
+        }
+    </script>
+</head>
+<body onload="winOpen()">
+    <div class="container">
+        <h1>window내장객체</h1>
+        <div id="menu">
+            <button onclick="winOpen()">창띄우기</button>
+            <button onclick="winClose()">창닫닫기</button>
+            <button onclick="winMove()">창이동</button>
+            <button onclick="setInterval('winSize()',2000);">창크기조절</button>
+            <button onclick="setInterval('winScroll()',500);">스크롤바이동</button>
+            <button onclick="getWindowInfo()">윈도우정보확인</button>
+        </div>
+        <div id="winInfo" style="background-color: beige;"></div>
+        <div>
+        <img src="../img/다운로드 (4).jpeg">
+        <img src="../img/다운로드 (5).jpeg">
+        <img src="../img/다운로드 (6).jpeg">
+        <img src="../img/다운로드 (2).jpeg">
+        <img src="../img/다운로드 (4).jpeg">
+    </div>
+    </div>
+</body>
+</html>

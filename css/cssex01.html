@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div:first-of-type{
+            width: 600px; height: 600px; border: 1px solid gray; overflow: hidden;
+            /*원하는 속도로 움직이도록 설정 : s,ms단위*/
+            transition-duration: 2s; 
+        }
+        div:first-of-type>img{width: 100%;}
+        input[type=checkbox]:checked + div{
+            height: 100px; width: 100px; opacity: 0.5;/*0~1사이의 값*/
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox"/>Click
+    <div>
+        <img src="../img/glass1.gif">
+        <img src="../img/다운로드 (2).jpeg">
+        <img src="../img/다운로드 (4).jpeg">
+        <img src="../img/다운로드 (6).jpeg">
+    </div>
+</body>
+</html>

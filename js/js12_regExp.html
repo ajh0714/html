@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function frmCheck(){
+            //정규표현식
+            var str = "JavaScript css Test중";
+            //문장에 css가 포함되어 있는 확인하는 정규표현식 만들기
+
+            var reg = /Css/; //i:대소문자 구별하지 않는다.
+            var result = reg.test(str);
+            console.log(result);
+
+            if(document.getElementById("username").value ==''){
+                alert("이름을 입력하세요.");
+                return false;
+            }
+
+            //이름은 2~8글자, 한글만 사용가능
+            //[A-Z] [a-z] [0-9] [가-힣]
+            // ^ : 처음부터 , $ : 끝까지
+            reg = /^[가-힣]{2,8}$/;
+            var username =document.getElementById("username").value;
+            if(!reg.test(username)){
+                alert("이름은 2~8글자 사이의 한글만 지원합니다.\n다시입력해주세요");
+                return false;
+            }
+            // 첫번쨰문자는 영대소문자, 영,숫자,_,$만허용, 8~15글자까지 허용용
+            reg = /^[A-Za-z]{1}[A-Za-z0-9_$]{7,14}$/;
+            if(!reg.test(document.getElementById("userid").value)){
+                alert("아이디는 첫번째문자는 영대소문자, 영, 숫자,_,$만허용, 8~15글자까지 허용");
+                return false;
+            }
+            //이메일검사
+            //abcdefg@nate.com      abcdegf@seoul.go.kr
+            //아이디 : 5~10글자사이, 영대소문자, 숫자, _ ->[A-Za-z0-9_] = \w
+            //                                          있을수 있고, 없을수도있다.(표현식식)?
+            reg = /^\w{5,10}@[A-Za-z0-9]{2,8}[.][a-z]{2,4}([.][a-z]{2,3})?$/;
+            var email = document.getElementById("email").value;
+
+            if(!reg.test(email)){
+                alert("이메일을 잘못입력하였습니다.");
+                return false;
+            }
+            var tel = document.getElementById("tel1").value + "-";
+                tel += document.getElementById("tel2").value + "-";
+                 tel += document.getElementById("tel3").value;
+                //    010-1234-5678
+            reg = /^(010|02|031|041|051|053)[-][0-9]{3,4}[-][0-9]{4}$/;
+            if(!reg.test(tel)){
+                alert("전화번호를 잘못입력하였습니다.");
+                return false;
+            }
+
+            // 취미는 반드시 2개이상 선택하여야 한다.
+            // checkbox에서 checked가 true인 갯수를 구한다.
+            var hobby = document.getElementsByClassName("hobby");
+            var cnt = 0;
+            for(var i=0; i<hobby.length; i++){
+                if(hobby[i].checked){ //checked상태인 체크박스 갯수 구하기기
+                    cnt++;
+                }
+            }
+            if(cnt<2){
+                alert("취미는 2개이상 선택하여야 합니다.");
+                return false;
+            }
+            return true;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>정규표현식을 이용한 유효성검사</h1>
+    <form method="post" action="ok.jsp" onsubmit="return frmCheck()">
+        이름 : <input type="text" id="username" value="홍길동"/><br/>
+        아이디 : <input type="text" id="userid" value="abcd123456"/><br/>
+        이메일 : <input type="text" id="email" value="goguma12@naver.com"/><br/>
+        연락처 : <input type="text" id="tel1">-
+                <input type="text" id="tel2">-
+                <input type="text" id="tel3"><br/>
+        취미 : <input type="checkbox" value="운동" class="hobby"/>운동
+        <input type="checkbox" value="쇼핑"class="hobby" checked/>쇼핑
+        <input type="checkbox" value="게임"class="hobby"/>게임
+        <input type="checkbox" value="달리기"class="hobby"/>달리기
+        <input type="checkbox" value="숨쉬기"class="hobby"/>숨쉬기
+        <input type="checkbox" value="잠자기"class="hobby"/>잠자기<br/>
+
+        <input type="submit" value="가입하기"/>
+    </form>
+</body>
+</html>

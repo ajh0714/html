@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function startLocation(){
+            var tag ="";
+            var protocol =location.protocol;
+            tag += "protocol="+protocol;
+
+            var hostname = location.hostname;
+            tag += "<br/>hostname" + hostname
+
+            var pathname = location.pathname;
+            tag += "<br/>pathname="+pathname;
+
+            tag += "<br/>port="+location.port;
+
+            tag += "<br/>host=" + location.host;
+            document.getElementById("view").innerHTML=tag;
+            
+            //다른 사이트 또는 현재서버의 다른페이지로 이동하기기
+            //location.href = "js14_setInterval.html"
+
+            //페이지 새로고침
+            location.reload()
+        }
+    </script>
+</head>
+<body>
+    <h1 onclick="startLocation()">location내장 객체</h1>
+    <div id="view"></div>
+</body>
+</html>

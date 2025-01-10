@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px; height: 200px;
+        }
+        #dl{
+            position: relative;
+    
+        }
+        #il{
+            position: absolute;
+            left: 200px;
+            top:200px;
+        }
+        #d2{
+            position:absolute;
+            left:100px;
+            top:100px;
+        }
+        #d3{
+            position: absolute;
+            left: 200px;
+            top:200px;
+
+            /* 겹쳐진 컴포넌트의 순서바꾸기 : 값이 클수록 위로 배치됨*/
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: yellow;"></div>
+    <div style="background-color: #00e1ff;">
+        <div style="background-color: rgb(255,0,234);" id="d2"></div>
+    </div>
+    <div style="background-color: #0004ff;" id="dl">
+        <img src="../img/다운로드 (3).jpeg" style="width:100px; height:100px" id="il"/>
+    </div>
+    <div style="background-color: rgb(255,0,21);" id="d3"></div>
+</body>
+</html>

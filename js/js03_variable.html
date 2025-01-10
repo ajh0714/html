@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a ="12";
+        var b ="12A";
+        var c = 3;
+        var d = true;
+
+        console.log(typeof(a),typeof(b),typeof(c),typeof(d));
+
+        var e = a*c;// number*string
+        document.write("e=",e);
+        var f = parseInt(b)*c;
+        document.write("<br/>f=",f);
+
+        var g =12;
+        var r1 = a == g; // 값만 같으면 같다다
+        console.log(r1);
+
+        var r2 = a === g;
+        console.log(r2);
+    </script>
+    
+</body>
+</html>

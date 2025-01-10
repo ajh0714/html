@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #e1{
+            margin: 50px; padding: 50px; background-color: aquamarine;
+        }
+        h1{
+            padding: 50px; background-color: yellow;
+        }
+        span{background-color: green; color: #fff;}
+    </style>
+    <script>
+        var cnt = 0;
+        function fun1(){
+            console.log('over -> cnt->', ++cnt);
+        }
+        function fun2(){
+            console.log('out -> cnt->', ++cnt);
+        }
+    </script>
+</head>
+<body>
+    <div id="e1" onmouseenter="fun1()" onmouseleave="fun2()">
+        <h1>onmouseenter=onmouseover,<span>onmouseleave=onmouseout</span>이벤트 테스트</h1>
+    </div>
+</body>
+</html>

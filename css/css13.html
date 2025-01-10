@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{border:1px solid gray;}
+    /* >:자손 선택자*/
+    ul>li{
+        background-color: beige;
+    }
+    /* space : 후손선택자 */
+    ul b{ /* ul>li>b */
+        font-size: 2em; color: red;
+    }
+    /*반응선택자*/
+    div li:hover,h1:hover{
+        background-color: yellow;
+    }
+</style>
+<body>
+    <div>
+        <h1>자손/후손 선택자자</h1>
+        <ul>
+            <li>111111</li>
+            <li>222222</li>
+            <li>33<b>33</b>33</li>
+            <li>444444</li>
+            <li>555555</li>
+        </ul>
+    </div>
+</body>
+</html>

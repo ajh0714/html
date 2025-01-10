@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{width: 100px; height: 100px;}
+    </style>
+    <script>
+        var multiple;
+        function funcTest(){
+            var sum = 100+200; //funcTest()함수의 지역변수
+            console.log("sum=", sum);
+            multiple = 100 * 200;
+            let i=1;
+            for(let i=1; i<=5; i++){
+                document.write("<img src='../img/glass1.gif'/>")
+            }
+            console.log("i=>",i);
+        }
+
+        funcTest();
+        //document.write("합계=",sum);
+        document.write("곲=",multiple)
+
+        // 함수는 return 만나면 무조건 함수가 종료된다.
+        //return; return true; return false; return hap;
+        function funcTest2(){
+            let hap = 12 + 5;
+            document.write("<br/>hap=",hap);
+
+            return hap;
+
+            let cha = 12 - 5;
+            document.write("<br/>cha=", cha);
+        }
+
+        let data = funcTest2();
+        document.write("<br/>date=>",data);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function startDate(){
+            var now1 = new Date(); //오늘현재 날짜, 시간
+            var now2 = new Date('2025-03-10');
+            var now3 = new Date('2025/03/10');
+            var now4 = new Date(1739588411515); // 1970년 1월1일0시0분0초 출발하는 밀리초를 넣음
+
+            console.log(now1);
+            console.log(now2);
+            console.log(now3);
+            console.log(now4);
+            
+            now1.setFullYear(2024);
+            now1.setMonth(4);
+
+            var y = now1.getFullYear();
+            var m = now1.getMonth();
+            var d = now1.getDate();
+            var h = now1.getHours();
+            var mi = now1.getMinutes();
+
+            var w =now1.getDay();// 요일 0:일 1:월 2:화 3:수....
+
+            document.getElementById("nowDate").innerHTML = y+"년"+(m+1)+"월"+d+"일"+h+"시"+mi+"분("+w+")";
+        }
+    </script>
+</head>
+<body onload="startDate();">
+    <div id="nowDate" style="font-size:3em; text-align: center;"></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.title{
+      text-align: center;
+}
+.container{
+    width: 750px;
+    margin: auto;
+    overflow: 0;
+    
+}
+.main{
+    
+    width: 650px;
+}
+ul>li{
+    margin: 10px;
+    list-style-type: none;
+}
+ul>li>div{
+    float: left;
+    border-bottom: 5px;
+    border-color: gray;
+}
+.text{
+    width: 150px;
+}
+.zz{
+   padding-left: 50px;
+   text-align: center;
+}
+li{
+    border-bottom: 5px;
+    border-color: gray;
+}
+</style>
+<body>
+    <div class="container">
+    <h1 class="title">회원가입 폼</h1>
+    <div class="main">
+    <ul class="main">
+    <li><div class="text">아이디</div><input type="text" class="in-box"><input type="button" value="아이디중복확인"></br></li>
+    <li><div class="text">비밀번호</div><input type="password" class="in-box"></br></li>
+    <li><div class="text">비밀번호확인</div><input type="password" class="in-box"></br></li>
+    <li><div class="text">이름</div><input type="text" class="in-box"></br></li>
+    <li><div class="text">연락처</div><select name="tel">- <optgroup label="선택">-<option>010</option>-<input type="text"size="10">-<input type="text"size="10"></br></li>
+    <li><div class="text">이메일</div><input type="text" class="in-box"></br></li>
+    <li><div class="text">우편번호</div><input type="text" class="in-box" size="40"><input type="button" value="우편번호찾기"></br></li>
+    <li><div class="text">주소</div><input type="text" class="in-box"></br></li>
+    <li><div class="text">상세주소</div><input type="text" class="in-box"></br></li>
+       <li><div class="text">취미</div><input type="checkbox" class="in-box">야구
+       <input type="checkbox">바이크
+       <input type="checkbox">등산
+       <input type="checkbox">쇼핑
+       <input type="checkbox">자전거
+       <input type="checkbox">걷기
+       <input type="checkbox">영화감상</br></li>
+       
+    </ul>
+   <div class="zz"><input type="button" value="회원가입하기"></div>
+</div>
+</div>
+</body>
+</html>

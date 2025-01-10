@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{width: 200px; height: 200px;}
+        #imgViewer, #viewer{background-color: beige; margin: 20px;}
+    </style>
+    <script>
+        let cnt=3;
+        const appendImage=()=>{
+            let imgTag = "<img src='../img/다운로드 ("+cnt+++").jpeg'/>"
+            document.getElementById("imgViewer").innerHTML += imgTag;
+            if(cnt>6) cnt=2;
+        }
+        function changeBorder(obj){
+            //두번째 이미지를 초록색 선으로 변경
+            obj.style.border = "5px dotted green";
+            
+        }
+        //
+        
+    </script>
+</head>
+<body>
+    <h1>추가</h1>
+    <div id="imgViewer">
+        <img src="../img/다운로드 (3).jpeg" onclick="alert('이미지를 클릭하였습니다.');"/>
+        <img src="../img/다운로드 (2).jpeg" onclick="appendImage()" onmouseover="this.style.border='5px solid red'
+        "onmouseout="changeBorder(this);"/>
+    </div>
+        <h1 id="txt" style="background-color: aquamarine;">클릭하세요.</h1>
+        <div id="viewer">
+    </div>
+    <script>
+    document.getElementById("txt").onclick = function(){
+        document.getElementById("viewer").innerHTML += "<h2>추가된 태그</h2>"
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #92cc65;
+        }
+        ul,li{margin:0; padding:0; list-style-type: none;}
+        .container{
+            background-color: #fff;
+            width: 1040px;
+            margin: 0 auto;
+        }
+        .topBanner{
+            padding-left: 165px;
+            height: 334px;
+        }
+        .container>nav:first-of-type{
+            background-color: #63bb27;
+            width: 1000px; height: 72px;
+            display: flex;
+        }
+        nav:first-of-type>ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        nav:first-of-type li{
+            padding:0px 20px;
+            font-size:1.3em;
+            line-height: 72px;
+        }
+        nav:first-of-type a:link,nav:first-of-type a:visited{
+            color: #fff;
+            text-decoration: none;
+        }
+        nav:first-of-type a:hover{
+            color:yellow;
+            text-decoration: none;
+        }
+        .middle-banner{
+            padding-left: 165px; height: 105px;
+        }
+        section a:link,section a:visited, section a:hover{
+            color: gray;
+            text-decoration: none;
+        }
+        section{
+            padding-left: 165px;
+            display: flex;
+        }
+        .news{
+            margin-right: 85px;
+        }
+        .news li{
+            list-style-type: decimal-leading-zero;
+            list-style-position: inside;
+            border: 2px solid gray;
+            padding: 10px;
+            margin: 20px 0px;
+        }
+        .gallery>ul{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .gallery li{
+            width: 82px;
+            margin: 5px;
+            font-size: 0.8em;
+            text-align: center;
+        }
+        
+        .gallery img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="topBanner">
+            <img src="../steelhouse/css_gaon_02.jpg"><img src="../steelhouse/css_gaon_03.jpg"><img src="../steelhouse/css_gaon_04.jpg"><img src="../steelhouse/css_gaon_05.jpg"><img src="../steelhouse/css_gaon_06.jpg">
+        </div>
+        <nav>
+            <img src="../steelhouse/css_gaon_08.jpg"/>
+            <ul>
+                <li><a href="">COMPANY</a></li>
+                <li><a href="">STEELHOUSE</a></li>
+                <li><a href="">ARCHITECTURE</a></li>
+                <li><a href="">INTERIOR</a></li>
+                <li><a href="">COMMUNITY</a></li>
+            </ul>
+        </nav>
+        <div class="middle-banner">
+            <img src="../steelhouse/css_gaon_15.jpg"><img src="../steelhouse/css_gaon_16.jpg"><img src="../steelhouse/css_gaon_17.jpg"><img src="../steelhouse/css_gaon_18.jpg"><img src="../steelhouse/css_gaon_19.jpg">
+        </div>
+    <section>
+        <div class="news">
+            <img src="../steelhouse/css_gaon_22.jpg">
+            <ul>
+                <li><a href="#">자주하시는 질문</a></li>
+                <li><a href="#">질문과 답변</a></li>
+                <li><a href="#">채용안내</a></li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <img src="../steelhouse/css_gaon_24.jpg">
+            <ul>
+                <li><a href="#"><img src="../steelhouse/g1.png">멋진 인테리어</a></li>
+                <li><a href="#"><img src="../steelhouse/g2.png">이쁜실내</a></li>
+                <li><a href="#"><img src="../steelhouse/g3.png">아파트단지</a></li>
+                <li><a href="#"><img src="../steelhouse/g3.png">회의실내부</a></li>
+                <li><a href="#"><img src="../steelhouse/g1.png">멋진 인테리어</a></li>
+                <li><a href="#"><img src="../steelhouse/g2.png">이쁜실내</a></li>
+                <li><a href="#"><img src="../steelhouse/g3.png">아파트단지</a></li>
+                <li><a href="#"><img src="../steelhouse/g1.png">희의실내부</a></li>
+            </ul>
+        </div>
+    </section>
+    <img src="../steelhouse/css_gaon_31.jpg" style="margin-left: 165px;">
+    </div>
+</body>
+</html>

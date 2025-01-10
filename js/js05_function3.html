@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function f(){.....}
+        // 익명함수
+        var h1 = function(a,b){
+            return a+b;
+        }
+        var result = h1(48,12);
+        document.write("h1(48,12)=>"+result);
+
+        //즉시 실행 함수
+        var mul;
+        (function(x,y){
+                mul= x*y;
+        }(3,5));
+
+        document.write("<br/>mul="+mul)
+
+        const hi = function(){
+            //alert("hi()함수가 호출됨");
+            console.log("hi()함수가 호출됨");
+        }
+        hi();
+
+        const hello = () =>{
+            //alert("hello()함수 호출됨.")
+            console.log("hello()함수가 호출됨")
+        }
+        hello();
+
+        const welcome = () => console.log("welcome()함수가 호출됨");
+        welcome();
+
+        const plus = (a, b) => {
+            let sum = a+b;
+            console.log('sum=', sum);
+        }
+        plus(5,6);
+
+        const getMessage = user =>{
+            document.write(user+"님 안녕하세요..");
+        }
+        getMessage("홍길동");
+    </script>
+</body>
+</html>

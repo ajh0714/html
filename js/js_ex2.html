@@ -1,0 +1,53 @@
+OCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        .container {
+            margin:auto;
+            width:80%;
+            text-align: center;
+        }
+        button {
+            width:60px;
+            margin-left:10px;
+            margin-right:10px;
+        }
+        #result{
+            margin-top:20px;
+            font-size:20px;
+        }
+    </style>
+    <script>
+        function gugu(a) {
+            let b=document.getElementById("result");
+            b.innerHTML="";
+            for(var i=1;i<10;i++) {
+                b.innerHTML+= a + " * " + i + "= " + a*i+"</br>";  
+            }
+        }
+        function makeButton() {
+            var bt = "";
+            let b = document.getElementById("buttons");
+            for(var i=1;i<10;i++) {
+                b.innerHTML += `<button onclick="gugu(`+i+`);">`+i+"</button>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>구구단</h1>
+        <div id="buttons"></div>
+        <div id="result"></div>
+    </div>
+    <script>
+        makeButton();
+    </script>
+</body>
+</html>

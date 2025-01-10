@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="r1"></li>
+        <li id="r2"></li>
+        <li id="r3"></li>
+        <li id="r4"></li>
+        <li id="r5"></li>
+        <li id="r6"></li>
+    </ul>
+    <script>
+        let arrNum = [100,50,23,66,-23,43,90,35];
+        let arrStr = ['pineapple','banana','mango','orange','apple','peach','blueberry'];
+        /*정렬전*/
+        document.getElementById("r1").innerHTML = "정렬전(숫자)=>"+arrNum;
+        document.getElementById("r2").innerHTML = "정렬전(문자)=>"+arrStr;
+
+        //오름차순 정렬
+        //--- 문자를 오름차순 정렬
+        arrStr.sort();
+        document.getElementById("r3").innerHTML = "오름차순(문자)=>" +arrStr;
+        
+        //----숫자를 오름차순 정렬
+        arrNum.sort(function(x,y){return x-y});
+        document.getElementById("r4").innerHTML = "오름차순(숫자)=>"+arrNum;
+
+        //내림차순정렬(Descending)
+        // 문자를 내림차순
+        arrStr.reverse();
+        document.getElementById("r5").innerHTML = "내림차순(문자)=>"+arrStr
+
+        //---- 숫자를 내림차순 정렬
+        arrNum.sort(function(x,y){return y-x});
+        document.getElementById("r6").innerHTML = "내림차순(숫자)=>"+arrNum
+    </script>
+</body>
+</html>

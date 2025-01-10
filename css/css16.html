@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body,ul,li{
+        margin:0; padding:0;list-style-type: none;
+    }
+    #menu1, #menu2{overflow: auto;}
+    #menu1>li{
+        float: left; width:16.6%; height: 50px; line-height: 50px; font-size: 2em; text-align: center;
+        background-color: olive; color:aliceblue
+    }
+    #menu1>li:first-child{
+        border-radius: 20px 0 0 20px;
+    }
+    #menu1>li:last-of-type{
+        border-radius: 0 0 20px 20px;
+    }
+    /*짝수번째, 홀수번째, 3의 배수번째....*/
+    #menu1>li:nth-child(2n+1){
+        background-color: orange;
+    }
+    #menu2>li{
+        float:left; width:16.6%; height: 60px; line-height: 60px; font-size: 2em; text-align: center;
+        background-image: url(../img/다운로드\ \(5\).jpeg);
+    }
+    #menu>li:nth-of-type(2n){
+        border-bottom:3px red solid;
+        border-radius: 0 25px 0 25px;
+    }
+    #menu>li:nth-of-type(2n+1){
+        border-bottom:3px blue solid;
+    }
+
+</style>
+</head>
+<body oncontextmenu="return false" onselectstart="return false">
+    <ul id="menu1">
+        <li>HOME</li>
+        <li>회사소개</li>
+        <li>고객센터</li>
+        <li>커뮤니티</li>
+        <li>자랑할래요</li>
+        <li>로그인</li>
+    </ul>
+</hr>
+<ul id="menu2">
+    <li>HOME</li>
+    <li>회사소개</li>
+    <li>고객센터</li>
+    <li>커뮤니티</li>
+    <li>자랑할래요</li>
+    <li>로그인</li>
+</ul>
+<style>
+    /*텍스트 스타일
+        ::first-letter : 텍스트중 첫번째 글자에 스타일을 지정한다.
+        ::first-line : 첫번째줄에 스타일적용
+        ::selection : 선택영역의 스타일적용
+        */
+        .content::first-letter{
+            font-size: 2em;
+            color: red;
+            background-color: aquamarine;
+        }
+        .content::first-line{
+            background-color: yellow; text-decoration: underline;
+        }
+        .content::selection{
+            background-color: black;
+            color: red;
+        }
+</style>
+<hr/>
+<div class="content">
+    자유 계약(FA) 신분을 얻기만 하면 대박을 터트릴 수도 있다. 손흥민(32, 토트넘 홋스퍼)이 이번에는 세리에 A의 전통 강호 AC 밀란과 연결됐다.
+    '피아네타 밀란'은 1일(한국시간) "밀란을 향한 영입 조언: 손흥민은 어떨까? 다음 여름 이적시장에 손흥민이 밀란의 영입 대상이 될 수 있을까? 다만 계약 연장이 모든 걸 망칠 수 있다"라고 전했다.
+    매체는 "최근 몇 주 동안 손흥민의 이름이 등장한 적은 없다. 하지만 그가 다음 이적시장에서 밀란의 영입 가능성이 있는 선수 목록에 포함될 수 있을까? 수년간 토트넘 기둥이었던 손흥민은 6월 30일에 계약이 만료되며 재계약에 서명하지 않을 시 이적할 수 있다"라고 덧붙였다.
+</div>
+</body>
+</html>

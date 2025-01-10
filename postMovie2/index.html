@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #maindiv{
+            width: 900px; height: 164px; margin:0 auto; background-color: aquamarine;
+        }
+        #maindiv>button, #poster-view{
+            float: left; height: 164px;
+        }
+        #poster-view{
+            width: 841px; overflow: hidden;
+        }
+        #poster-list{
+            width: 2320px; height: 164px; position: relative;
+        }
+    </style>
+    <script>
+        //#poster-list 이미지 추가
+        var img = ['m1','m2','m3','m4','m5','m6','m7','m8','m9','m10','m11','m12','m13','m14','m15','m16','m17','m18','m19','m20']
+
+        function setImage(){
+            var imgTag = "";
+            for(var i=0; i<img.length; i++){
+                imgTag += "<img src='"+img[i]+".png'/>";
+            }
+            console.log(imgTag);
+            document.getElementById("poster-list").innerHTML = imgTag
+        }
+    </script>
+</head>
+<body onload="setImage()">
+    <div id ="maindiv">
+        <button>◁</button>
+        <div id = "poster-view" style="background-color: blue;">
+            <div id="poster-list"></div>
+        </div>
+        <button>▷</button>
+    </div>
+</body>
+</html>

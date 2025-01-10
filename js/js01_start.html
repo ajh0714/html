@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.title="javascript연습중";
+        //"자바스크립트javascript"
+        /*여러줄주석  wirte()함수수*/
+        document.write("자바스크립트에서 문자열을 body에 출력")
+    </script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>자바스크립트 테스트</h1>
+    <script>
+            document.write("body에서 찍기<br/>")
+            document.write('<img src="../img/glass1.gif"/>')
+
+            /*연산, 명령(if, switch, for, while, do-while, 배열)*/
+            //변수 : 별도데이터형이 없다. 대입하는 데이터에 따라서 자동으로 데이터형이 정해진다.
+            // var: 같은 페이지에서 재선언이 가능함.
+            // let: 같은 페이지에서 같은 변수명을 1번만 선언할수있다. 
+            // const: 상수화된 변수수
+            var age = 28;
+            var num;
+            document.write("<br/>age="+ age);
+            document.write("<br/>num="+num)
+
+            console.log(typeof(age));
+            console.log(age);
+
+            var age=25;
+            document.write("<br/>age="+age);
+
+            let name="홍길동";
+            name="세종대왕";
+            document.write("<br/>이름="+name);
+
+            const tel="010-9999-9999";
+            //tel="010-7777-8888";
+            document.write("<br/>tel="+tel);
+            document.write("<br/>상수화된 변수 테스트 중")
+            // +,-,",/
+            for(let a=1; a<=10; a++){
+                var tag="<img src='../img/";
+                if(a<10){
+                    tag +="glass"+a;
+                }else{
+                    tag += a;
+                }
+                tag +=".gif'style='width:100px;height:100px'/>"
+                document.write(tag);
+            }
+    </script>
+</body>
+</html>
+<script>
+    document.write("<br/>html태그 밖에서 출력하기기")
+</script>

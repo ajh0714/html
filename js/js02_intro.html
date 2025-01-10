@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>대화상자</h1>
+    <script>
+        //알림대화상자 : 확인버튼이 있는 알림창
+        //alert("아이디는 8~12글자 사이이여야 합니다.");
+
+        //알림대화상자 : 확인,취소를 선택할 수 있는 대화상자
+        //let status = confirm("삭제하시겠습니까?"); // 확인:true, 취소:false
+        //console.log(status);
+        //if(status){
+          //  document.write("삭제하였습니다.....")
+        //}else{
+          //  document.write("삭제취소하였습니다.....")
+        //}
+
+        //값을 입력받는 대화상자
+      var dan = prompt("단(1~9)을 입력하세요",7);
+      console.log(typeof(dan));
+      for(var i=2; i<=9; i++){
+        document.write("<h2>", dan, "*", i,"=", (dan*i), "</h2>")
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+            let a= 120;
+            let b=130;
+            let c=a+b;
+            document.write(a+"+"+b+"="+c+"<br/>");
+        }
+        //함수만들기:매개변수가 있는 함수
+        function gugudan(dan){
+            for(i=2; i<=9; i++){
+                document.write(dan +'*'+i+"="+(dan*i)+"<br/>");
+            }
+        }
+        function multiple(a,b){
+            let result = a * b;
+            
+            //DOM방식으로 태그를 선택
+            //document.getElementsById("i2").value=result;
+            document.getElementById("i2").value=result+100;
+        }
+        function setStyle(){
+            document.getElementsByClassName("c1")[0].style.backgroundColor = "beige";
+           
+            //id3에 img태그 추가하기
+            var tag = "<img src='../img/glass1.gif' width='200' height='200'>"
+            // innerHTML: 선택자 내부에 태그를 추가가
+            document.getElementById("i3").innerHTML += tag;
+            var tag2= "<ul><li>11111</li><li>22222</li><li>33333</li></ul>";
+            // outerHTML : 선택자 자체를 다른 태그 변경추가한다.
+            document.getElementById("i4").outerHTML = tag2;
+        }
+    </script>
+</head>
+<body>
+    <h1 class="c1">함수생성하며 호출하기</h1>
+    <h2 id="i1">두수를 매개변수로 전달받아 곲을 구한후 결과값을 input박스에 출력</h2>
+    결과값 : <input type="text" id="i2" name="r"/><br/>
+    <h1 class="c1">함수생성하며 호출하하기2222</h1>
+    <div id="i3">innerHTML</div>
+    <div id="i4"></div>
+    <script>
+        //함수 호출
+        add();
+        gugudan(7);
+        multiple(5,8);
+        setStyle();
+    </script>
+</body>
+</html>

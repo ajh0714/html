@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* font-family : 글꼴 */
+        div.c1{
+            font-family: 궁서,굴림,Arial, Helvetica, sans-serif;
+        }
+        div.c2{
+            /*글자 크기 : px(기본16px), pt,cm,in(inch),em(상대크기) */
+            font-size: 1.2em;
+            /*글자 유형 : 진하게(bold),기울임(italic),보통(normal)*/
+            font-style: italic;
+            font-weight: 100;/*bold, 100,200,300,~800*/
+            letter-spacing: 1.5em;/*자간*/
+        }
+        div.c3{
+            text-align:center;
+        }
+        li{
+            border:1px solid #000;
+            height: 100px;
+            width: 300px;
+            font-size: 2em;
+            text-align: center;
+            line-height: 100px;
+            margin: 30px;
+            /*글자에 그림자 넣기*/
+            text-shadow: -5px -5px 5px red ;
+            /* 박스에 그림자 넣기*/
+            box-shadow: 5px 5px 5px gray;
+            /*대소문자*/
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">웹문서에서사용할글꼴지정</div>
+    <div class="c2">지정한글꼴이없을경우에대비해두번째,세번째 글꼴까지 지정</div>
+    <div class="c3">둘이상의글꼴이름을지정할때는쉼표(,)로글꼴구분</div>
+    <ul>
+       <li>Javascript</li>
+       <li>Html</li> 
+       <li>Spring Framework</li> 
+       <li>Mybatis Framework</li> 
+    </ul>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login-title{
+            text-align: center;
+            font-size:40px;
+            font-weight: 600;
+            padding: 50px 0px 50px 0px;
+        }
+        .login-idpw{
+            margin: 5px;
+            height: 50px;
+            width: 500px;
+        }
+        .login-containers{
+           width: 500px; 
+           margin: auto;
+        }
+        .login-button{
+            margin:10px;
+            width:500px;
+            height:50px;
+            background-color: blue;
+            font-size: 15px;
+            color:white;
+        }
+        .signup{
+            width: 70px;
+            height: 25px;}
+        .find{
+            font-size: 15px;
+            
+        }
+        input::placeholder{
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form class="login-containers">
+    <div class="login-title">로그인 폼</div>
+        <input type="text" class="login-idpw" name="userid" placeholder="아이디(5~15자의 영문,숫자만 가능)" /></br>
+        <input type="password" class="login-idpw" name="userpassword" placeholder="비밀번호(입력실패5회시 잠금처리)"  /></br>
+        <input type="submit" class="login-button" value="로그인"/>
+        <input type="button" class="signup" value="회원가입"/>
+        <div class ="find">아이디/비밀번호 찾기</div>
+        
+    </form>
+</body>
+</html>

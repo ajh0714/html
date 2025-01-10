@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{font-size:2em;}
+    </style>
+   <script>
+    function setback(box){
+        box.style.backgroundColor="pink";
+    }
+   </script>
+</head>
+<body>
+    <form>
+        <input type="text" name="userid" id="userid" onblur="setback(this)"/>
+    </form>
+    <h1 id="clk"> 클릭하면 글자색이 색경됨</h1>
+    <div id="txt"> 12313231203120320301230120312031203102301230123013012301가나다라3012301203120312031203012</div>
+    <script>
+        document.getElementById("userid").onfocus = function(){
+            document.getElementById("userid").style.backgroundColor="yellow";
+        }
+        /*keyup, keydown, keypress*/
+        document.getElementById("userid").onkeypress = function(){
+            var key =event.keyCode
+            console.log('key->', key);
+            if(key<48||key>57){
+                return false;
+            }
+        }
+        function changeTextColor(){
+            document.querySelector("#txt").style.color="red";
+        }
+        var dom = document.querySelector("#clk");
+        dom.onclick = changeTextColor;
+    </script>
+</body>
+</html>
