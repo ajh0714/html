@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="viewer"></ul>
+    <script>
+        //웹사이트에서 로컬 저장소에 정보를 기록, 읽기를 할수 있는 내장객체
+
+        //localStorage는 접속이 종료되더라도 데이터가 남아 있다.
+
+        //데이터를 기록하기 key,value
+        localStorage.setItem("userid","goguma")
+        localStorage.setItem("addr",'서울시 성동구 아차산로');
+
+        //데이터 읽어오기
+        var id = localStorage.getItem("userid");
+        var addr = localStorage.getItem("addr");
+
+        document.getElementById("viewer").innerHTML += "<li>아이디 :"+id+"</li>";
+        document.getElementById("viewer").innerHTML += "<li>주소소 :"+addr+"</li>";
+
+        //sessionStorage의 정보는 웹브라우저가 닫히면 값이 사라진다.
+
+        // 데이터를 기록하기
+        sessionStorage.setItem("product","컴퓨터");
+        sessionStorage.setItem("price",2500);
+        sessionStorage.setItem("Login",true);
+
+        document.getElementById("viewer").innerHTML += "<lid>상품명:"+ sessionStorage.getItem("product")+"</li>"
+             document.getElementById("viewer").innerHTML += "<lid>가격:"+ sessionStorage.getItem("price")+"</li>"
+              document.getElementById("viewer").innerHTML += "<lid>로그인여부:"+ sessionStorage.getItem("Login")+"</li>"
+</script>
+    
+
+</body>
+</html>

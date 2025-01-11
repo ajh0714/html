@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function popupOpen(){
+            var cook = document.cookie; //popup=yes; notice=ok
+            console.log(cook);
+            if(cook.indexOf("popup=yes") == -1){
+            window.open("popup.html","pop","width:400, height=450");
+        }
+    }
+    </script>
+</head>
+<body onload="popupOpen()">
+    <h1>Cookie 사용하기</h1>
+    <p>
+        클라이언트 컴퓨터의 메모리에 값을 기록하여 사용할 수수 있다.
+    </p>
+</body>
+</html>

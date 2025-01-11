@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .container{
+            background-color:darkgrey;
+            width: 700px;
+            margin: 100px auto;
+            overflow: auto;
+            text-align: center;
+        }
+        #title{
+            text-align: center;
+            font-size: 3em;
+        }
+        .in-box, .log-btn{
+            padding: 20px;
+            margin: 10px 0px;
+        }
+        .in-box{
+            width: 456px;
+            border: 2px solid black;
+
+        }
+        .log-btn{
+            width: 500px;
+            padding: 20px;
+            background-color:powderblue;
+            color: white;
+            font-size: 1.5em;
+        }
+        .left, .right{
+            float: left; width: 50%;  height: 100px;
+        }
+     
+        a:link, a:visited, a:hover{
+            color: black; text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">로그인</h1>
+        <form method="post" action="#">
+            <input type="text" name="userid" class="in-box"placeholder="아이디"minlength="5" maxlength="15"/>
+            <input type="password" name="userpwd" class="in-box" placeholder="비밀번호" minlength="5" maxlength="15"/>
+            <input type="submit" value="로그인" class="log-btn"/>
+        </form>
+        <div class="left">
+            <input type="button" value="회원가입"/>
+        </div>
+        <div class="right">
+            <a href="#">아이디/비밀번호 찾기</a>
+        </div>
+    </div>
+</body>
+</html>

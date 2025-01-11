@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>navigator를 이용한 위치 정보 구하기기</h1>
+    <div style="background-color: beige; font-size: 3em; text-align: center;">ㄹㄹ</div>
+    <script>
+        //현재 위치의 위도, 경도를 구하기
+        function getLocation(){
+            var geo  = navigator.geolocation
+            console.log(geo);
+            navigator.geolocation.getCurrentPosition(function(position){
+                console.log(position);
+                //var latitude= position.coords.latitude;
+                var latitude = position['coords']['latitude'];
+                document.getElementsByTagName("div")[0].innerHTML="위도="+latitude
+            });
+        }
+        
+        getLocation();
+    </script>
+</body>
+</html>

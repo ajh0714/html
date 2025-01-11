@@ -9,10 +9,26 @@
         div{float:left; width: 50%;}
         div:last-of-type{text-align: right;}
     </style>
+    <script>
+        function popupClose(){
+            //checkbox가 checked이면 쿠키를 기록한다.
+            var chk = document.getElementById("chk")
+            if(chk.checked){//체크를 했을때
+                var date=new Date();// 년월일시분초
+
+                date.setDate(date.getDate()+1); //2025-01-11 12:00
+
+                document.cookie = "popup=yes;path=/;expires="+date;
+                document.cookie = "notice=ok;path=/;expires="+date;
+            }
+            //팝업창 닫기기
+            window.close(); // self.close();
+        }
+    </script>
 </head>
 <body>
     <img src="../img/다운로드 (4).jpeg">
-    <div><input type="checkbox"name="chk"> 하루동안 그만 보기</div>
-    <div><input type="button" value="Close"></div>
+    <div><input type="checkbox"name="chk" id="chk"> 하루동안 그만 보기</div>
+    <div><input type="button" value="Close" onclick="popupClose();"></div>
 </body>
 </html>

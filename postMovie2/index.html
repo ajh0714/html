@@ -15,7 +15,7 @@
             width: 841px; overflow: hidden;
         }
         #poster-list{
-            width: 2320px; height: 164px; position: relative;
+            width: 2330px; height: 164px; position: relative;
         }
     </style>
     <script>
@@ -30,15 +30,31 @@
             console.log(imgTag);
             document.getElementById("poster-list").innerHTML = imgTag
         }
+
+        //poster 이동할 함수
+        var x = 0;
+        var step = -5;
+        function posterMove(){
+            x = x + step; // -5 -10 -15 
+            document.getElementById("poster-list").style.left = x+"px";
+            if(x<=-1480) step = 5;
+            if(x>0) step = -5;
+        }
+
+        window.onload = function(){
+            setImage();
+            setInterval("posterMove()",100);
+        }
     </script>
 </head>
-<body onload="setImage()">
+<body>
     <div id ="maindiv">
-        <button>◁</button>
+        <button onclick="step=-5">◁</button>
         <div id = "poster-view" style="background-color: blue;">
-            <div id="poster-list"></div>
+            <div id="poster-list" onmouseover="clearInterval(timer)"
+                                  onmouseout="timer=setInterval('posterMove()',100)"></div>
         </div>
-        <button>▷</button>
+        <button onclick="step=5;">▷</button>
     </div>
 </body>
 </html>
