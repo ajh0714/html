@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{width:100px; height:100px;}
+    </style>
+    <script>
+        function createTag(){
+            var tag1 = "<img src='../img/cinqueterre.jpg'/>"
+           // document.body.appendChild(tag1)
+            document.getElementsByTagName("body")[0].innerHTML += tag1;
+
+            //태그를 DOM객체로 생성하기
+            var tag2 = document.createElement("h1"); // 태그생성 <h1>내용</h1>
+            // 시작태그와 끝태그내에 표시할 내용을 객체로 생성성
+        }
+    </script>
+</head>
+<body>
+    <button id="clk" onclick="createTag()">Click</button><br/>
+    <img src="../img/cinqueterre.jpg"/>
+</body>
+</html>

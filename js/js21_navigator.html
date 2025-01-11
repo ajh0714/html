@@ -18,6 +18,8 @@
                 //var latitude= position.coords.latitude;
                 var latitude = position['coords']['latitude'];
                 document.getElementsByTagName("div")[0].innerHTML="위도="+latitude
+                var longitude = position['coords']['longitude'];
+                document.getElementsByTagName("div")[0].innerHTML +="<br/>경도="+longitude
             });
         }
         
