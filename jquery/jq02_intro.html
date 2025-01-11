@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            // "#i", ".c"    "div"
+            $("body").append("<div id='test'>jQuery 테스트중....</div>");
+            // css(속성,속성값) : 스타일시트 설정
+            $("#test").css("background-color","yellow").css("fonr-size","2em")
+                        .css("color","red");
+        });
+        $(function(){
+            $("body").append("<img src='../img/glass2.gif' style='width:100px; height:100px;'/>")
+
+            //선택자
+            // "img", "#i1", ".c1"
+            $(".c1").css("color","red")
+            $("#i2").css("background-color",'green')
+            $("#i2>b").css("color","blue");
+            $("#i2 b").css("background-color","pink")
+            $("#ii,#iii").css("background-color","orange")
+
+            //li의 부모중에 자식노드가 1개인 부모를 선택한다.
+            $("li:only-child").css("font-size","2em");
+            
+            //li태그의 index가 2이후 태그들을 선택
+            $("#m1>li").slice(2).css("background-color","green")
+            //li태그의 index가 4인 태그를 선택
+            $("#m1>li").eq(4).css("color","white")
+            // :lt, :gt
+            $("#m1>li:lt(3)").css("font-size","3em")
+        })
+    </script>
+</head>
+<body>
+    <div>
+    <h1 class="c1" id="i1">jQuery 선택자</h1>
+    <h1 id="ii">jQuery 선택자</h1>
+    <h1 class="c1">jQuery 선택자</h1>
+    <h1 id="i2">jQuery 선택자</h1>
+    <h1 class="c1">jQuery 선택자</h1>
+    <h1 id="iii">jQuery 선택자</h1>
+</div>
+<div>
+    <ul id="m1">
+        <li>Menu1</li>
+        <li>Menu2</li>
+        <li>Menu3</li>
+        <li>Menu4</li>
+        <li>Menu5</li>
+        <li>Menu6</li>
+    </ul>
+    <ul id="m2">
+        <li>Menu1</li>
+        
+    </ul>
+</div>
+</body>
+</html>
