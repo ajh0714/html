@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{width: 200px; height: 200px;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div><img src="../img/cinqueterre.jpg" id="i" ></div>
+    <script>
+        var imgObj= document.getElementById("i");
+        //마우스 오버시 호출할 함수
+        function changeImage(){
+            imgObj.src = "../img/glass1.gif"; // imgObj.
+            imgObj.style ="width:220px;height:220px; border:5px solid red"
+        }
+        //마우스 아웃 호출할 함수
+        function originalImage(){
+            imgObj.src="../img/cinqueterre.jpg";
+            imgObj.style="width:200px; height:200px; border:0px;"
+        }
+        //이벤트 등록             이벤트종류, 호출함수
+        imgObj.addEventListener("mouseover",changeImage)
+        imgObj.addEventListener("mouseout", originalImage)
+    </script>
+</body>
+</html>

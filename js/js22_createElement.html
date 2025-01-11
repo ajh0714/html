@@ -6,6 +6,7 @@
     <title>Document</title>
     <style>
         img{width:100px; height:100px;}
+        
     </style>
     <script>
         function createTag(){
@@ -14,8 +15,27 @@
             document.getElementsByTagName("body")[0].innerHTML += tag1;
 
             //태그를 DOM객체로 생성하기
-            var tag2 = document.createElement("h1"); // 태그생성 <h1>내용</h1>
+            var tag2 = document.createElement("h1"); // 태그생성 <h1 title="ddd">내용</h1>
             // 시작태그와 끝태그내에 표시할 내용을 객체로 생성성
+            var node = document.createTextNode("Dom형식을 태그 생성중")
+            //tag2에 node추가
+            tag2.appendChild(node);
+            //html태그의 속성 설정하기
+            tag2.setAttribute("title","마우스오버를 하였습니다.")
+            tag2.setAttribute("style","background-color:orange;color:white;")
+        
+            document.body.appendChild(tag2);
+
+            var imgTag = document.createElement("img");
+            imgTag.setAttribute("src","../img/glass1.gif");
+            imgTag.setAttribute("style","width:200px; height:200px;")
+            document.body.appendChild(imgTag);
+
+            //객체삭제
+            //tag2.remove();
+            document.body.removeChild(imgTag);
+
+            document.getElementById("clk").remove();
         }
     </script>
 </head>
