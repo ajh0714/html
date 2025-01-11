@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        //javascript code
+        // document에서 ready이벤트가 발생하면 = onload
+        var name="홍길동";
+        function getName(){
+            return"나의 이름은"+name+"입니다";
+        }
+
+        //jquery Code
+        $(document).ready(function(){
+            //jquery 명령어 기술하는 곳
+            $("#viewer").append("<h1>jquery에서 추가된 태그</h1>")
+        });
+    </script>
+</head>
+<body>
+    <h1>jquery테스트중</h1>
+    <div id="viewer">
+        <script>
+            document.write(getName());
+        </script>
+    </div>
+</body>
+</html>

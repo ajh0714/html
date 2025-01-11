@@ -10,6 +10,7 @@
 </head>
 <body>
     <div><img src="../img/cinqueterre.jpg" id="i" ></div>
+    <div id="view"></div>
     <script>
         var imgObj= document.getElementById("i");
         //마우스 오버시 호출할 함수
@@ -25,6 +26,11 @@
         //이벤트 등록             이벤트종류, 호출함수
         imgObj.addEventListener("mouseover",changeImage)
         imgObj.addEventListener("mouseout", originalImage)
+
+        document.getElementById("view").innerText = "<h2>innerHTML테스트</h2>";
+
+        var attr = document.getElementById("i").getAttribute("src");
+        document.getElementById("view").innerHTML +="<br/>+attr"
     </script>
 </body>
 </html>
