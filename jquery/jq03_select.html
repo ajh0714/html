@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            //인접선택자
+            $("div").children(".one").css("background-color", "yellow");
+            //속성과 속성값이 있는 속성은 attr()
+            $("div").next().attr("src","../img/glass1.gif")
+            // readonly=true, false
+            $("div").next().next().prop("readonly",false)
+            $("h3").prev().css("color","red");
+            $("h4").parent().css("border","5px solid gray")
+            $("h3").siblings().css("border", "2px dotted blue")
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h1 id="first">선택자의 종류1 </h1>
+        <h1 class="one">선택자의 종류 2</h1>
+        <h2 class="one">선택자의 <span>종류 </span>3</h2>
+        <h4>선택자의 종류4 </h4>
+        <h3>선택자의 종류5 </h3>
+        <h2>선택자의 종류6 </h2>
+    </div>
+    <img src="../img/cinqueterre.jpg">
+    <input type="text" readonly/>
+</body>
+</html>
