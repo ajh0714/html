@@ -110,6 +110,18 @@
                             var marker = new google.maps.Marker({
                                 map:map,
                                 icon:'pin.png',
+                                title : addr,
+                                position:results[0].geometry.location
+                            })
+
+                            var popup = new google.maps.InfoWindow({content:tag})
+
+                            //이벤트등록
+                            google.maps.event.addListener(marker,'mouseover',function(){
+                              popup.open(map,marker);  
+                            })
+                            google.maps.event.addListener(marker,'mouseout',function(){
+                                popup.close(map,marker);
                             })
                 }else{//주소가 없을떄
                     alert("존재하지 않는 주소입니다.")
