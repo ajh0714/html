@@ -45,10 +45,26 @@
             var dialogInfo = "위도:" + position.latitude
             dialogInfo += "<br/>경도 : "+ position.longitude;
             dialogInfo += "<br/><a href='https://www.seoul.go.kr'>";
-            dialogInfo += "<img src='../../img/02.jpeg' width='100'height='100'/></a>"
+            dialogInfo += "<img src='../../img/다운로드 (3).jpeg' width='100'height='100'/></a>"
 
             //2.대화상자 객체 생성
-            var info = new google.maps.infoWindow({content:dialogInfo});
+            var info = new google.maps.InfoWindow({content:dialogInfo});
+
+            //3.마커 클릭시 대화상자 보여주기
+            google.maps.event.addListener(marker1,'click',function(){
+                info.open(map,marker1);
+            });
+            //4. 반경표시 하기
+            var myCity = new google.maps.Circle({
+                center : myCenter,
+                radius : 500, //반경(m단위)
+                strokeColor : 'red', //테두리 색상
+                strokeWidth : 10, // 테두리 선의 두께
+                strokeOpacity : 0.3,//테두리 선의 투명도(0~1)
+                fillColor : '#00f', //배경색
+                fillOpacity : 0.3 // 배경색 투명도
+            })
+            myCity.setMap(map);
         }
      </script>
 </body>

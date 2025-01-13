@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글맵(지명,건물명으로 검색)</title>
+    <style>
+        body{margin:0}
+        #geoMap{
+            background-color: yellowgreen; min-width: 90vw; min-height: 97vh;
+        }
+        #searchList{
+            position: absolute; width: 300px; min-height: 80vh; background-color: gray;
+            left: 50px; top: 50px; opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <!-- 지도 표시 할곳-->
+     <div id="geoMap"></div>
+     <!-- 검색 결과 표시하는 곳-->
+      <div id = "searchList"></div>
+      <!-- 검색어 입력-->
+       <div>
+        <input type="text" id="searchWord">
+        <!-- 마우스 클릭시 검색하여 결과를 searchList에 표시한다.-->
+        <input type="button"value="Geocode"/>
+       </div>
+</body>
+</html>
