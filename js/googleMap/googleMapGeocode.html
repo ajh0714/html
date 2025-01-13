@@ -55,7 +55,7 @@
        <div id="searchBox">
         <input type="text" id="searchWord">
         <!-- 마우스 클릭시 검색하여 결과를 searchList에 표시한다.-->
-        <input type="button"value="Geocode"/>
+        <input type="button" id="searchBtn"  value="Geocode"/>
        </div>
        <script async defer src="https://maps.googleapis.com/maps/api/js?key-AIzaSyAyyB96vSOjmfFt5OuTAdDCMRNzsKxZ-TQ&callback=startMap"></script>
        <script>
@@ -82,22 +82,50 @@
         geocoder = new google.maps.Geocoder();
         }
 
-        function getAddress(){
+        function getAddress(word){
+            console.log(word);
 
+            //입력받은 지명 또는 건물명으로 지도 정보 구하기
+            //지명 또는 건물명,콜백함수
+            geocoder.geocode({address:word},function(results,status){
+                console.log(results);
+                console.log(status);
+                if(status == 'OK'){//주소가있을떄
+
+                    var latitude = results[0].geometry.location.lat(); //위도
+                    var longitude = results[0].geometry.location.lng(); //경도
+                    var addr = results[0].formatted_address;
+                        var tag = "<div class='search'>";
+                            tag += "<h3>"+word+"</h3>";
+                            tag += "주소 :"+ results[0].formatted_address;
+                            tag += "</div>";
+
+                            document.getElementById("searchList").innerHTML += tag;
+                }else{//주소가 없을떄
+                    alert("존재하지 않는 주소입니다.")
+                }
+            })
         }
 
         //버튼을 클릭시
-        document.getElementById("searchWord").keyup = function(){
+        document.getElementById("searchBtn").onclick = function(){
+                //searchWord에 값이 있을때만 지도검색색
                 geoAddress();
+                console.log();
         }
-        document.getElementById("searchWord").keyup = function(){
+        document.getElementById("searchWord").onkeyup = function(){
             //enter가 입력되면 searchWord에 값이 있을떄만 지도검색
-            if(event.keyCode =){
-                
+            if(event.keyCode = 13){
+                    geoAddress();
             }
         }
-        function getAddress(){
-
+        function geoAddress(){
+            var word =document.getElementById("searchWord").value
+            if(word==""){
+                alert("지명 또는 건물명을 검색하세요")
+            }else{
+                getAddress();
+            }
         }
        </script>
 </body>
