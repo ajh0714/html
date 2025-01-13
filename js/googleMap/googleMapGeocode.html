@@ -7,7 +7,7 @@
     <style>
         body{margin:0}
         #geoMap{
-            background-color: yellowgreen; min-width: 90vw; min-height: 97vh;
+            background-color: yellowgreen; min-width: 98vw; min-height: 100vh;
         }
         /* 검색리스트 */
         #searchList{
@@ -20,20 +20,85 @@
         }
         /*검색박스*/
         #searchBox{
-            position: absolute; left: 0; top:50px; width: 100%;text-align: center;
+            position: absolute; left: 0; top:50px; width: 100%; text-align: center;
         }
     </style>
+    <script>
+        //현재위치구하기
+        var lati;
+        var longi;
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(
+                    function(position){
+                        console.log(position);
+                        lati=position.coords.latitude;
+                        longi=position.coords.longitude;
+                    }
+                );
+                }else{
+                    console.log("위도경도없음.")
+                    lati=37.56672500903637
+                    longi=126.9786296490
+                }
+
+            }
+        getLocation();
+    </script>
 </head>
 <body>
     <!-- 지도 표시 할곳-->
      <div id="geoMap"></div>
      <!-- 검색 결과 표시하는 곳-->
-      <div id = "searchList"></div>
+      <div id = "searchList"><div class="search">fdfd</div></div>
       <!-- 검색어 입력-->
        <div id="searchBox">
         <input type="text" id="searchWord">
         <!-- 마우스 클릭시 검색하여 결과를 searchList에 표시한다.-->
         <input type="button"value="Geocode"/>
        </div>
+       <script async defer src="https://maps.googleapis.com/maps/api/js?key-AIzaSyAyyB96vSOjmfFt5OuTAdDCMRNzsKxZ-TQ&callback=startMap"></script>
+       <script>
+          lati=37.56672500903637
+          longi=126.9786296490
+          var map;
+        function startMap(){
+            
+            var myCenter = new google.maps.LatLng(lati,longi);
+
+            map = new google.maps.Map(document.getElementById("geoMap"),{
+            center : myCenter,    
+            zoom : 15,
+            mapTypeId :  google.maps.ROADMAP
+        });
+        var marker = new google.maps.Marker({
+            position:myCenter,
+            icon:'pin.png',
+            map:map
+        });
+        marker.setMap(map);
+
+        //지명,건물명으로 검색이 가능한 geocode객체를 생성한다.
+        geocoder = new google.maps.Geocoder();
+        }
+
+        function getAddress(){
+
+        }
+
+        //버튼을 클릭시
+        document.getElementById("searchWord").keyup = function(){
+                geoAddress();
+        }
+        document.getElementById("searchWord").keyup = function(){
+            //enter가 입력되면 searchWord에 값이 있을떄만 지도검색
+            if(event.keyCode =){
+                
+            }
+        }
+        function getAddress(){
+
+        }
+       </script>
 </body>
 </html>
