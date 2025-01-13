@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>구글맵(지명,건물명으로 검색)</title>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyyB96vSOjmfFt5OuTAdDCMRNzsKxZ-TQ&callback=startMap"></script>
     <style>
         body{margin:0}
         #geoMap{
@@ -57,11 +59,11 @@
         <!-- 마우스 클릭시 검색하여 결과를 searchList에 표시한다.-->
         <input type="button" id="searchBtn"  value="Geocode"/>
        </div>
-       <script async defer src="https://maps.googleapis.com/maps/api/js?key-AIzaSyAyyB96vSOjmfFt5OuTAdDCMRNzsKxZ-TQ&callback=startMap"></script>
        <script>
           lati=37.56672500903637
           longi=126.9786296490
           var map;
+          var geocoder;
         function startMap(){
             
             var myCenter = new google.maps.LatLng(lati,longi);
@@ -101,6 +103,14 @@
                             tag += "</div>";
 
                             document.getElementById("searchList").innerHTML += tag;
+
+                            map.setCenter(results[0].geometry.location);
+
+                            //마커만들기
+                            var marker = new google.maps.Marker({
+                                map:map,
+                                icon:'pin.png',
+                            })
                 }else{//주소가 없을떄
                     alert("존재하지 않는 주소입니다.")
                 }
@@ -115,7 +125,7 @@
         }
         document.getElementById("searchWord").onkeyup = function(){
             //enter가 입력되면 searchWord에 값이 있을떄만 지도검색
-            if(event.keyCode = 13){
+            if(event.keyCode == 13){
                     geoAddress();
             }
         }
@@ -124,7 +134,7 @@
             if(word==""){
                 alert("지명 또는 건물명을 검색하세요")
             }else{
-                getAddress();
+                getAddress(word);
             }
         }
        </script>
