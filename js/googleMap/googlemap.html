@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위도/경도를 이용한 구글맵 사용하기</title>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key-AIzaSyAyyB96vSOjmfFt5OuTAdDCMRNzsKxZ-TQ&callback=initMap"></script>
+    <style>
+        body{margin: 0;}
+        #gMap{
+            min-width: 100vw; min-height: 100vh; border : 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 지도를 표시할 곳-->
+     <div id = "gMap"></div>
+     <script>
+        var position = {
+            latitude:37.56672508903637, //위도
+            longitude:126.9786296490 // 경도도
+        }
+        function initMap(){
+            var myCenter = new google.maps.LatLng(position.latitude,position.longitude)
+            var option={
+                center : myCenter,
+                zoom : 14,// 지도의 확대정도 0~21까지의 값을 사용한다. 숫자가 클수록 확대된다.
+                mapTypeId : google.maps.MapTypeId.ROADMAP // ROADMAP, HYBRID, STEELISTE,TERRAIN
+            }
+            //                             지도를 표시할 곳, 옵션(중심위치,지도종류,확대정도도)
+            var map = new google.maps.Map(document.getElementById("gMap"),option);// 지도 객체
+
+            //마커 표시하기, 마표시할 위치, 마커이미지, 지도선택, 풍선도움말말
+            var markerOption = {
+                position : myCenter, // 표시할곳
+                map : map, // 지도
+                title : "서울시청" ,// 풍선도움말말
+                icon:'pin2.png'
+            }
+            var marker1 = new google.maps.Marker(markerOption);
+            marker1.setMap(map);
+
+            //마커 클릭시 대화상자 표시하기
+            //대화상자에 표시할 내용을 html로 만든다.
+            var dialogInfo = "위도:" + position.latitude
+            dialogInfo += "<br/>경도 : "+ position.longitude;
+            dialogInfo += "<br/><a href='https://www.seoul.go.kr'>";
+            dialogInfo += "<img src='../../img/02.jpeg' width='100'height='100'/></a>"
+
+            //2.대화상자 객체 생성
+            var info = new google.maps.infoWindow({content:dialogInfo});
+        }
+     </script>
+</body>
+</html>

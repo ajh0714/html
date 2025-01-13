@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+    <style>
+        ul,li{
+            margin:5px; padding:5px; list-style-type: none;
+        }
+        li{
+            float: left; border: 1px solid gray;
+        }
+        img{width: 100px; height: 100px;}
+    </style>
+    <script>
+        $(function(){
+            //before() : 선택자의 이전에 객체 추가
+            $("#img").before("<li><img src='../img/다운로드 (4).jpeg'/></li>");
+            //after() : 선택자 다음에 객체 추가
+            $("#copy").after("<li><img src='../img/다운로드 (5).jpeg'/></li>");
+
+            //append()
+            $("ul").append("<li><img src='../img/다운로드 (6).jpeg'/></li>");
+            //appendTo()
+            $("<li><img src='../img/다운로드 (3).jpeg'/></li>").appendTo("ul");
+
+              //insertAfter()
+              $("<li><img src='../img/다운로드 (2).jpeg'/></li>").insertAfter("#img");
+              //insertBefore()
+              $("<li><img src='../img/다운로드.jpeg'/></li>").insertBefore("#img");
+
+              //clone() : 객체를 복사, 1번만 추가 할수 있다.
+              var obj = $("#copy").clone();
+              obj.attr("id","copy2");
+              $("ul").append(obj);
+
+              //지우기
+              //선택자 자체 지우고
+              $("#copy").remove();
+              //선택자 내용만 지우기
+              $("#img").empty();
+        })
+        
+    </script>
+</head>
+<body>
+    <ul>
+        <li id="img"><img src="../img/cinqueterre.jpg"></li>
+
+    </ul>
+</body>
+</html>
