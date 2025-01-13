@@ -9,9 +9,18 @@
         #geoMap{
             background-color: yellowgreen; min-width: 90vw; min-height: 97vh;
         }
+        /* 검색리스트 */
         #searchList{
             position: absolute; width: 300px; min-height: 80vh; background-color: gray;
             left: 50px; top: 50px; opacity: 0.3;
+        }
+        .search{
+            margin: 10px; padding: 5px; background: black; opacity: 0.7;
+            color: white; border-radius: 10px;
+        }
+        /*검색박스*/
+        #searchBox{
+            position: absolute; left: 0; top:50px; width: 100%;text-align: center;
         }
     </style>
 </head>
@@ -21,7 +30,7 @@
      <!-- 검색 결과 표시하는 곳-->
       <div id = "searchList"></div>
       <!-- 검색어 입력-->
-       <div>
+       <div id="searchBox">
         <input type="text" id="searchWord">
         <!-- 마우스 클릭시 검색하여 결과를 searchList에 표시한다.-->
         <input type="button"value="Geocode"/>
