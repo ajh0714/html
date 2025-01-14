@@ -13,21 +13,21 @@
     //onkeyup,onkeydown,onkeypress
 
     $(function(){
-        /*/ 이벤트 표기법1
+        // 이벤트 표기법1
         $("h1").click(function(){
-            //$(".container").prepend("<h2>h1태그에 click이벤트가 발생하였습니다.</h2> ")
-            //this 
+            $(".container").prepend("<h2>h1태그에 click이벤트가 발생하였습니다.</h2> ")
+            
             $(this).append("★");
             $(this).css('background-color','yellow')
         });
-        */
+        
 
         /*/이벤트표기법2-----------------
         $("h1").on("click",function(){
             $(this).prepend("☆").css('background-color','orange')
         });*/
 
-        // 이벤트표기법 3 -----------------------------
+        /*/ 이벤트표기법 3 -----------------------------
         $("h1").on({mouserover:function(){//마우스 오버시
                     $(this).css("background-color", "pink")
         },mouseout:function(){ // 마우스 아웃시
@@ -36,8 +36,18 @@
 
         });
 
-        // 이벤트 표기법 4
-    })
+        // 이벤트 표기법 4 -----------------------------------------
+        $('input').on("click focus",function(){
+            // attr() : 속성과 값이 있는 속성일때
+            // prop() : 속성은 있고 값은 없는 속성일때때
+            $(this).attr("value","jquery 이벤트 처리중..");
+            $(this).attr("type","text");
+        });*/
+        $(document).on("click", "h2",   function(){
+            $(this).css("color","red");
+        })
+        $
+})
 </script>
 <body>
 <div class="container">
