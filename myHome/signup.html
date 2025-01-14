@@ -60,13 +60,19 @@
             height: 60px; width: 358px; margin-top:20px; background-color: powderblue; color: white;
             font-size: 25px;
         }
-        
+       #main1{
+        padding: 0px; line-height: 0px;margin-top: 150px;
+       }
+       #banner{
+        width: 100%; text-align: center; font-size: 30px; background-color: black; color: white; line-height: 50px; padding:0px;
+       }
         
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>회원가입</h1>
+        <div id="banner">homepage</div>
+        <h1 id="main1">회원가입</h1>
         <form method="post" action="memberOk.jsp" id="frm" onsubmit="return frmCheck()">
             <ul id="all">
                 <li>아이디</li>
