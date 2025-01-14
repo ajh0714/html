@@ -45,9 +45,15 @@
         });*/
         $(document).on("click", "h2",   function(){
             $(this).css("color","red");
+        });
+        
+        // 남은 글자수 표시하기
+        $("#replyTxt").keyup(function(){
+            //현재까지 입력된 글자수
+            var cnt=100-$("#replyTxt").val().length;
+            $("#cnt").text(cnt);
         })
-        $
-})
+})  
 </script>
 <body>
 <div class="container">
@@ -63,7 +69,7 @@
     <div>
         <hr/>
         <div>남은 글자수 : <span id="cnt">100</span></div>
-        <textarea id="replyTxt"maxlength="100" cols="50"></textarea>
+        <textarea id="replyTxt"maxlength="99" cols="50"></textarea>
      </div>
 </div>
 </body>
