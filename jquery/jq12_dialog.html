@@ -16,11 +16,46 @@
     <script src="jquery-ui.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #dialogOpen, #result{
+            width: 600px; border: 1px solid gray; margin: 0 auto; text-align: center;
+        }
+        #dialogOpen{
+         font-size: 1.8em;
+        }
+        #result{
+            height: 500px; background-color: beige;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#dialogOpen").click(function(){
+                //dialog창 열기
+                $("#dialog").dialog('open');
+            })
+            $("#dialog").dialog({
+                autoOpen:false ,
+                width:500,
+                modal : true // 기본(false),false인경우 본문 사용가능, true인 경우 본문 사용불가가
+            });
+
+            //날짜 입력박스 달력을 셋팅 : datepicker
+            $("#event-date").datepicker({});
+        });
+    </script>
 </head>
 <body>
-<div>일정등록</div>
+<div id="dialogOpen">일정등록</div>
 <hr/>
-<!-- 등록한 일정 표시할 곳곳-->
+<!-- 등록한 일정 표시할 곳-->
 <div id="result"></div>
+
+<!-- dialog 창만들기-->
+ <div id ="dialog" title="다이어리">
+    <h2>일정을 등록하세요.</h2>
+    <label for="event-name">일정이름</label> : <input type="text" id="event-name"/>
+    <label for="event-date">날짜선택</label> : <input type="text" id="event-date"/>
+
+ </div>
 </body>
 </html>
