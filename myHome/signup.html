@@ -19,26 +19,47 @@
             }
             
             reg = /^[A-Za-z0-9_$]{7,14}$/;
-            if(!reg.test(document.getElementById("userid").value)){
+            var userid = document.getElementById("userid").value;
+            if(!reg.test(userid)){
                 alert("아이디를 잘못 입력하였습니다.");
                 return false;
             }
-    
-            reg = /^\w{5,10}@[A-Za-z0-9]{2,8}[.][a-z]{2,4}([.][a-z]{2,3})?$/;
-            var email = document.getElementById("email").value;
+            reg = /^[A-Za-z0-9_$]{7,19}$/;
+            var userpwd = document.getElementById("userpwd").value;
+            if(userpwd.length<8){
+                alert("비밀번호를 잘못 입력하였습니다.")
+                return false;
+            }
 
-            if(!reg.test(email)){
+            reg =/^[A-Za-z0-9_$]{7,19}$/;
+            var pwd2 = document.getElementById("pwd2").value;
+            if(userpwd != pwd2){
+                alert("서로 다른 비밀번호를 입력하였습니다.")
+                return false;
+            }
+    
+            reg =/^[A-Za-z0-9]{4,19}$/;
+            var useremail = document.getElementById("useremail").value;
+
+            if(!reg.test(useremail)){
                 alert("이메일을 잘못입력하였습니다.");
                 return false;
             }
             var tel = document.getElementById("tel").value
-            reg = /^(010|02|031|041|051|053)[-][0-9]{3,4}[-][0-9]{4}$/;
+            reg = /^(010|02|031|041|051|053)[0-9]{3,4}[0-9]{4}$/;
             if(!reg.test(tel)){
                 alert("전화번호를 잘못입력하였습니다.");
                 return false;
             }
-            return true;
+            alert("가입에 성공하였습니다.")
+            signup();
         }
+        function signup(){
+                document.getElementById("sign").value 
+                location.href = "./login.html"
+            }
+           
+            
     </script>
     <style>
         body{background-color: darkgrey;}
@@ -61,19 +82,19 @@
             font-size: 25px;
         }
        #main1{
-        padding: 0px; line-height: 0px;margin-top: 150px;
+        padding: 0px; line-height: 0px;margin-top: 80px;
        }
        #banner{
-        width: 100%; text-align: center; font-size: 30px; background-color: black; color: white; line-height: 50px; padding:0px;
+        width: 100%; height: 140px; text-align:center ; font-size: 60px; background-color: black; color: white; line-height: 120px; padding:0px;
        }
         
     </style>
 </head>
 <body>
+    <div id="banner">homepage</div>
     <div class="container">
-        <div id="banner">homepage</div>
         <h1 id="main1">회원가입</h1>
-        <form method="post" action="memberOk.jsp" id="frm" onsubmit="return frmCheck()">
+        <form method="post" action="memberOk.jsp" id="frm">
             <ul id="all">
                 <li>아이디</li>
                 <li><input type="text" name="userid" id="userid" style="height: 40px; width: 350px;" placeholder="아이디는 8~15자리/영문,숫자,특수문자,_,$,만 사용가능"></li>
@@ -86,13 +107,13 @@
                 <li>연락처</li>
                 <li><input type="text" name="tel" id="tel" style="height: 40px; width: 350px;"placeholder=" - 를 제외하고 숫자만 입력 "></li>
                 <li>이메일</li>
-                <li><input type="email" name="useremail" id="useremail" style="height: 40px; width: 200px;" placeholder="영문,숫자만 입력">
+                <li><input type="text" name="useremail" id="useremail" style="height: 40px; width: 200px;" placeholder="영문,숫자만 입력">
                     <select name="language" style="height: 43px;width: 145px;" >
                         <option>@naver.com</option>
                         <option>@google.com</option>
                         <option>@hanmail.net</option>
                         <option>@nate.com</option></li>
-                <li><input type="submit" id="sign" name="hwp" value="가입하기" ></li>
+                <li><input type="button" id="sign" name="hwp" value="가입하기" onclick="frmCheck()" ></li>
                 
             </ul>
         </form>
