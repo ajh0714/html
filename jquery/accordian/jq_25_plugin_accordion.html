@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- https://github.com/alaingoga에서 다운로드 -->
+<link rel="stylesheet" href="plugin/accordionImageMenu.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="plugin/jquery.accordionImageMenu.js"></script>
+<script>
+	$(function(){
+		$("#acco").AccordionImageMenu({
+			position:'horizontal',  //horizontal, vertical
+			openItem:3,//기본 선택목록
+			//openDim:600, //확장된 목록의 크기
+			//closeDim:100, //닫힌 목록의 크기
+			// width(vertical일때 적용), height(horizontal일때 적용)
+			width:2000,
+			duration:1000,//전환속도
+			effect:'easeOutBounce',//easing
+			border:1,
+			color:'red'
+		});
+	});
+</script>
+</head>
+<body>
+<!-- 아코디언 ul태그에 생성해야함.... -->
+<ul id="acco">
+	<li><a href="#"><img src="img/car1.jpg"></a></li>
+	<li><a href="#"><img src="img/car2.jpg"></a></li>
+	<li><a href="#"><img src="img/car3.jpg"></a></li>
+	<li><a href="#"><img src="img/car4.jpg"></a></li>
+	<li><a href="#"><img src="img/car1.jpg"></a></li>
+	<li><a href="#"><img src="img/car2.jpg"></a></li>
+	<li><a href="#"><img src="img/car3.jpg"></a></li>
+	<li><a href="#"><img src="img/car4.jpg"></a></li>
+</ul>
+</body>
+</html>
