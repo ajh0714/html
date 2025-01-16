@@ -1,11 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>방명록</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#guest-form {
+            margin-top: 20px;
+        }
+
+        #guest-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #guest-form input,
+        #guest-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #guest-form button {
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #guest-form button:hover {
+            background-color: #444;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .message h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .message p {
+            margin: 5px 0;
+        }
+    
+</style>
+
 </head>
 <body>
+    <div class="container">
+        <div style="width:2800px;"></div>
+        <h1></br></br></h1>
+        <form id="guest-form">
+            <label for="name">작성자:</label>
+            <input type="text" id="name" name="name" >
+            <label for="message">내용:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit" id="sb">작성</button>
+        </form>
+        <div id="guest-messages">
+            <h2>방명록 기록</h2>
+        </div>
+    </div>
+    <script>
+        document.getElementById('guest-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const name = document.getElementById('name').value;
+                    const message = document.getElementById('message').value;
+
+                    if (name && message) {
+                        const newMessage = document.createElement('div');
+                        newMessage.classList.add('message');
+
+                        const messageTitle = document.createElement('h3');
+                        messageTitle.textContent = name;
+
+                        const messageContent = document.createElement('p');
+                        messageContent.textContent = message;
+
+                        newMessage.appendChild(messageTitle);
+                        newMessage.appendChild(messageContent);
+
+                        document.getElementById('guest-messages').appendChild(newMessage);
+                        document.getElementById('guest-form').reset();
+                    } else {
+                        alert('작성자와 내용을 모두 입력해 주세요.');
+                    }
+                });
+            
+        
+    </script>
     
 </body>
 </html>

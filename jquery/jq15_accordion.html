@@ -24,12 +24,15 @@
     <script>
         $(function(){
             $("#accor").AccordionImageMenu({
-              //  position:'horizontal'//'horizontal', 'vertical'
-              //  ,openItem : 3// 기본 선택목록
-               // ,openDim : 600,
-               // closeDim : 100,
-                //width:1200
-                //,border:5
+                position : 'horizontal'
+              ,openItem:3//  position:'horizontal'//'horizontal', 'vertical'
+              ,openDim:600,//  ,openItem : 3// 기본 선택목록
+               closeDim:100,// ,openDim : 600,
+               height:600,// closeDim : 100,
+               duration:1000, //width:1200
+               effect:'easeOutBounce',
+                border:10,//,border:5
+                color:'blue'
             });
         })
     </script>

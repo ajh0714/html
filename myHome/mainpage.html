@@ -3,93 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <style>
-    #banner{
-        width: 100%; height: 140px; text-align:center ; font-size: 60px; background-color: black; color: white; line-height: 120px; padding:0px;
-       }
-    #containers{
-        width: 750px; height: 800px; margin: 0; background-color: darkgrey;
-       }
-      ul>li{
-        list-style-type: none; float: left; width: 230px; text-align: center; line-height: 40px; height: 50px;
-          border-bottom: 2px solid black;
-      }
-      a:link, a:visited, a:hover{
-               color: black; text-decoration: none; font-size: 20px;
+        body {
+            background-color: darkgray;
         }
-        #nada{
-            float: right; margin: 150px 30px;
-           
+
+        #img {
+            width: 100%;
+            background-color: #001100;
+            margin-top: 10px;
         }
-        #img{
-            float: left; margin: 150px 30px;
+
+        #banner {
+            width: 100%;
+            height: 120px;
+            text-align: center;
+            font-size: 60px;
+            background-color: black;
+            color: white;
+            line-height: 100px;
+            padding: 0px;
         }
-        #main-container{
-            display:flex;
+
+        #containers {
+            width: 760px;
+            height: 650px;
+            margin: 0;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        ul>li {
+            list-style-type: none;
+            float: left;
+            width: 230px;
+            text-align: center;
+            line-height: 40px;
+            height: 50px;
+            border-bottom: 2px solid black;
+        }
+
+        a:link, a:visited, a:hover {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        #nada {
+            float: right;
+            margin: 150px 30px;
+        }
+
+        #img {
+            float: left;
+        }
+
+        #main-container {
+            display: flex;
             justify-content: center;
         }
-        #left-button{
+
+        #hello {
+            width: 500px;
+            height: 300px;
+            font-size: 40px;
+            text-align: center;
+            margin-left: 130px;
+        }
+
+        #img2 {
+            background-color: red;
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-left: 70px;
+            margin-top: 150px;
+            background-image: url(../myHome/profile.png);
+            border-radius: 50%;
+            background-size: 100%;
+        }
+
+        #me {
+            float: right;
+            margin-left: 150px;
+            margin-top: 250px;
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #guest-form {
+            margin-top: 20px;
+        }
+
+        #guest-form label {
+            display: block;
+            margin-bottom: 5px;
+            
+        }
+
+        #guest-form input,
+        #guest-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #guest-form button {
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #guest-form button:hover {
+            background-color: #444;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .message h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .message p {
+            margin: 5px 0;
         }
     </style>
     <script>
-        var page=1;
+        var page = 1;
+
         function goPage(inData) {
-            let nav = document.getElementById("nav-"+page);
-            nav.style.fontWeight='400';
-            page+=inData;
-            if(page>3) page=1;
-            if(page<1) page=3;
+            let nav = document.getElementById("nav-" + page);
+            nav.style.fontWeight = '400';
+            page += inData;
+            if (page > 3) page = 1;
+            if (page < 1) page = 3;
             loadContents();
         }
+
         function setPage(inData) {
-            let nav = document.getElementById("nav-"+page);
-            nav.style.fontWeight='400';
-            page=inData;
+            let nav = document.getElementById("nav-" + page);
+            nav.style.fontWeight = '400';
+            page = inData;
             loadContents();
         }
+
         function loadContents() {
             let mc = document.getElementById("main-content");
-            let nav = document.getElementById("nav-"+page);
-            nav.style.fontWeight='bold';
-            mc.innerHTML="";
-            if(page==1) {
-                mc.innerHTML= `
-                    <div id="img"><img src="../img/다운로드 (3).jpeg"></div>
-        <pre id="nada">안녕하세요 ㅁㄴㅇㄻㄴㅇㄹㄴㅁㅇㄹㅇㄴㄹ
-안녕하세요 ㅁㄴㅇㄻㄴㅇㄹㄴㅁㅇㄹㅇㄴㄹ
-안녕하세요 ㅁㄴㅇㄻㄴㅇㄹㄴㅁㅇㄹㅇㄴㄹ
-안녕하세요 ㅁㄴㅇㄻㄴㅇㄹㄴㅁㅇㄹㅇㄴㄹ
-안녕하세요 ㅁㄴㅇㄻㄴㅇㄹㄴㅁㅇㄹㅇㄴㄹ
-안녕하세요 ㅁㄴㅇㄻㄴㅇㄹㄴㅁㅇㄹㅇㄴㄹ
-안녕하세요 ㅁㄴㅇㄻㄴㅇㄹㄴㅁㅇㄹㅇㄴㄹ
-안녕하세요 ㅁㄴㅇㄻㄴㅇㄹㄴㅁㅇㄹㅇㄴㄹ</pre>
-                `;
+            let nav = document.getElementById("nav-" + page);
+            nav.style.fontWeight = 'bold';
+            mc.innerHTML = "";
+            if (page == 1) {
+                mc.innerHTML = `
+                    <div id="img"><img src="../myHome/homepage3.png"></div>
+                    <div id="hello">안녕하세요.</br>
+                        안준현 입니다.</div>`;
             }
-            if(page==2) {
-                mc.innerHTML=`<div style="width:300px;">사진 페이지</div>`;
+            if (page == 2) {
+                mc.innerHTML = `<div id="img2"></div>
+                <pre id="me">
+                        이름 : 안준현
+
+                        나이 : 1997년7월14일
+
+                        지역 : 경기도 성남
+
+                      이메일 : ajh970714@gmail.com
+
+                    자기소개 : 개발자를 목표로 2개월째 공부중입니다..
+                                감사합니다.</pre>`;
             }
-            if(page==3) {
-                mc.innerHTML=`<div style="width:300px;">방명록 페이지</div>`;
-                
+            if (page == 3) {
+                mc.innerHTML = `
+                    <div style="width:2800px;"></div>
+                    <h1></br></br></h1>
+                    <form id="guest-form">
+                        <label for="name">작성자:</label>
+                        <input type="text" id="name" name="name" >
+                        <label for="message">내용:</label>
+                        <textarea id="message" name="message"></textarea>
+                        <button type="submit" id="sb">작성</button>
+                    </form>
+                    <div id="guest-messages">
+                        <h2>방명록</h2>
+                    </div>`;
+                document.getElementById('guest-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const name = document.getElementById('name').value;
+                    const message = document.getElementById('message').value;
+
+                    if (name && message) {
+                        const newMessage = document.createElement('div');
+                        newMessage.classList.add('message');
+
+                        const messageTitle = document.createElement('h3');
+                        messageTitle.textContent = name;
+
+                        const messageContent = document.createElement('p');
+                        messageContent.textContent = message;
+
+                        newMessage.appendChild(messageTitle);
+                        newMessage.appendChild(messageContent);
+
+                        document.getElementById('guest-messages').appendChild(newMessage);
+                        document.getElementById('guest-form').reset();
+                    } else {
+                        alert('작성자 및 내용을 모두 입력해 주세요.');
+                    }
+                });
             }
         }
     </script>
 </head>
 <body onload="loadContents()">
-    <div id="banner">homepage</div>
+    <div id="banner">AJHome</div>
     <div id="main-container">
-    <button id="left-button" onclick="goPage(-1)">◁</button>
-    <div id="containers">
-        <ul id="">
-            <li id="nav-1"><a href="#" onclick="setPage(1)">자기소개</a></li>
-            <li id="nav-2"><a href="#" onclick="setPage(2)">사진</a></li>
-            <li id="nav-3"><a href="#" onclick="setPage(3)">방명록</a></li>
-        </ul>
-        <div id="main-content">
+        <button id="left-button" onclick="goPage(-1)">◁</button>
+        <div id="containers">
+            <ul id="">
+                <li id="nav-1"><a href="#" onclick="setPage(1)">Home</a></li>
+                <li id="nav-2"><a href="#" onclick="setPage(2)">About me</a></li>
+                <li id="nav-3"><a href="#" onclick="setPage(3)">Guest</a></li>
+            </ul>
+            <div id="main-content"></div>
         </div>
-    </div>
-    <button id="right-button" onclick="goPage(1)">▷</button>
+        <button id="right-button" onclick="goPage(1)">▷</button>
     </div>
 </body>
 </html>
