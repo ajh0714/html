@@ -18,7 +18,7 @@
             return true;
         }
         function sendLocation(){
-            location.href = "LocationTest.jsp?page=4&searchWord=컴퓨터";
+            location.href = "locationTest.jsp?nowpage=4&searchWord=컴퓨터";
         }
     </script>
     </head>

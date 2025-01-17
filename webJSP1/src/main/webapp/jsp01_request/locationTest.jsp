@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <@
-    int page = Integer.parseInt(request.getParameter("page"));
+    int nowpage = Integer.parseInt(request.getParameter("nowpage"));
     String searchWord = request.getParameter("searchWord");
 @>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
 </head>
 <body>
 <h1> Javascript의 location내장객체를 이용한 데이터 전송</h1>
-현재 페이지 : <%= page+3 %><br/>
+현재 페이지 : <%= nowpage+3 %><br/>
 검색어 : <%= searchWord %>
 </body>
 </html>

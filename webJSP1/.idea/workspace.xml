@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a98ff80-601f-4038-8d80-fdea38512e66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp01_request/Form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp01_request/formOk.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp01_request/locationTest.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myHome/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../myHome/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp01_request/Form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp01_request/Form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp01_request/locationTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp01_request/locationTest.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
