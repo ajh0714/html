@@ -60,13 +60,13 @@
         function login() {
             reg = /^[A-Za-z0-9_$]{5,15}$/;
             var userid = document.getElementById("userid").value;
-            if(userid.length<1){
+            if(userid.length<5){
                 alert("아이디를 입력해주세요");
                 return false;
             }
             reg = /^[A-Za-z0-9_$]{7,19}$/;
             var userpwd = document.getElementById("userpwd").value;
-            if(userpwd.length<1){
+            if(userpwd.length<7){
                 alert("비밀번호를 입력해주세요.")
                 return false;
             }
