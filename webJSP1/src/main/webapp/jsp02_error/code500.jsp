@@ -1,8 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-    int nowpage = Integer.parseInt(request.getParameter("nowpage"));
-    String searchWord = request.getParameter("searchWord");
-%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +10,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<h1> Javascript의 location내장객체를 이용한 데이터 전송</h1>
-현재 페이지 : <%= nowpage+3 %><br/>
-검색어 : <%= searchWord %>
+<h2>Error발생함</h2>
+<hr/>
+<img src="<%=request.getContextPath()%>/image/500.jpeg" width="50%" align="center"/><br/>
+<div>
+    ErrorMessage : <%= exception.getMassage() %>
+</div>
+<a href = "<%=request.getContextPath()%>/">통으로 이동 </a>
+<a href = "<%=request.getContextPath()%>/jsp02_error/errorTest.jsp">errorTest.jsp로 이동</a>
 </body>
 </html>
