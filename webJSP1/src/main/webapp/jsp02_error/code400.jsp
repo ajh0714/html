@@ -12,11 +12,12 @@
 <body>
 <h2>Error발생함</h2>
 <hr/>
-<img src="<%=request.getContextPath()%>/image/500.jpeg" width="50%" align="center"/><br/>
+<img src="<%=request.getContextPath()%>/image/error.png" width="50%" align="center"/><br/>
 <div>
     ErrorMessage : <%//= exception.getMassage() %>
 </div>
 <a href = "<%=request.getContextPath()%>/">통으로 이동 </a>
 <a href = "<%=request.getContextPath()%>/jsp02_error/errorTest.jsp">errorTest.jsp로 이동</a>
+
 </body>
 </html>
