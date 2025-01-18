@@ -26,14 +26,15 @@
 <body>
 <div class="menu">
 <div>
-        <a href="<%=request.getContextPath()%>/">홍</a>
-    </div>
-    <div>
-            <a href="<%=request.getContextPath()%>/jsp01_request/aLink.jsp">aLink</a>
-        </div>
-        <div>
-                <a href="<%=request.getContextPath()%>/jsp01_request/Form.jsp">form</a>
-            </div>
+<a href="<%=request.getContextPath()%>/">홈</a>
 </div>
-</body>
-</html>
+<div>
+<a href="<%=request.getContextPath()%>/jsp01_request/aLink.jsp">aLink</a>
+</div>
+<div>
+<a href="<%=request.getContextPath()%>/jsp01_request/Form.jsp">form</a>
+</div>
+<div>
+<a href="<%=request.getContextPath()%>/jsp04_cookie/createCookie.jsp">쿠키생성</a>
+</div>
+</div>

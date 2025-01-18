@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a98ff80-601f-4038-8d80-fdea38512e66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/inc/bar.jspf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/inc/end.jspf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/inc/menu.jspf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp03_include/bottom.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp03_include/footer.jspf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp03_include/header.jspf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp03_include/includeMain_jsp.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp03_include/includeMain_jspf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp03_include/top.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp04_cookie/createCookie.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/inc/bar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inc/bar.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/inc/end.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inc/end.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/inc/menu.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inc/menu.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp01_request/aLink.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp01_request/aLink.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

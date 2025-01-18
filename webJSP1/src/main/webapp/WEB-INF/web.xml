@@ -24,6 +24,7 @@
     <url-pattern>*.jsp</url-pattern>
     <include-prelude>/inc/bar.jspf</include-prelude>
     </jsp-property-group>
+
   </jsp-config>
 
   <error-page>
