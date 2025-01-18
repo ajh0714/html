@@ -10,6 +10,22 @@
   <description>
     Welcome to Tomcat
   </description>
+  <!-- include -->
+  <jsp-config>
+      <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+    <!-- 페이지 상단에 조각파일로 include할 파일명-->
+      <include-prelude>/inc/menu.jspf</include-prelude>
+    <!-- 페이지 하단에 조각파일로 include할 파일명-->
+    <include-code>/inc/end.jspf</include-code>
+      </jsp-property-group>
+
+  <jsp-property-group>
+    <url-pattern>*.jsp</url-pattern>
+    <include-prelude>/inc/bar.jspf</include-prelude>
+    </jsp-property-group>
+  </jsp-config>
+
   <error-page>
     <error-code>404</error-code>
     <location>/jsp02_error/code400.jsp</location>
