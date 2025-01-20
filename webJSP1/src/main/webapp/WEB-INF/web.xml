@@ -17,7 +17,7 @@
     <!-- 페이지 상단에 조각파일로 include할 파일명-->
       <include-prelude>/inc/menu.jspf</include-prelude>
     <!-- 페이지 하단에 조각파일로 include할 파일명-->
-    <include-code>/inc/end.jspf</include-code>
+    <include-coda>/inc/end.jspf</include-coda>
       </jsp-property-group>
 
   <jsp-property-group>
@@ -25,14 +25,8 @@
     <include-prelude>/inc/bar.jspf</include-prelude>
     </jsp-property-group>
 
+
   </jsp-config>
 
-  <error-page>
-    <error-code>404</error-code>
-    <location>/jsp02_error/code400.jsp</location>
-  </error-page>
-  <error-page>
-    <error-code>500</error-code>
-    <location>/jsp02_error/code500.jsp</location>
-  </error-page>
+
 </web-app>

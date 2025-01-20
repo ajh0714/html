@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a98ff80-601f-4038-8d80-fdea38512e66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp04_cookie/createCookie.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ict/home/MemberVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/standard.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp04_cookie/cookieView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp05_session/sessionInvalidate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp05_session/sessionRemove.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp05_session/sessionSave.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp05_session/sessionView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/chooseTag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/forEachTag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/ifTag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/jstlHome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/redirectTag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/setTag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/urlTag.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/inc/bar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inc/bar.jspf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/inc/end.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inc/end.jspf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/inc/menu.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inc/menu.jspf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp01_request/aLink.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp01_request/aLink.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="JSP File" />
       </list>
     </option>
@@ -43,24 +56,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Smart Tomcat.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/workspaceWeb/webJSP1/src/main/webapp/image&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Smart Tomcat.Unnamed.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/workspaceWeb/webJSP1/src/main/webapp/image",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15234375",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "fileTemplates"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspaceWeb\webJSP1\src\main\webapp\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspaceWeb\webJSP1\src\main\webapp\WEB-INF\lib" />
       <recent name="D:\workspaceWeb\webJSP1\src\main\webapp\image" />
     </key>
   </component>
