@@ -5,25 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a98ff80-601f-4038-8d80-fdea38512e66" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ict/home/MemberVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/standard.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp04_cookie/cookieView.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp05_session/sessionInvalidate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp05_session/sessionRemove.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp05_session/sessionSave.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp05_session/sessionView.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/chooseTag.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/forEachTag.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/ifTag.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/jstlHome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/redirectTag.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/setTag.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/urlTag.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ict/home/MemberDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ict/home/MemberVO2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ict/home/MySqlDBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bbs/bbsList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/bbs/bbsWrite.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/member/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/member/loginOk.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/member/logout.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/inc/bar.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inc/bar.jspf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/inc/menu.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/inc/menu.jspf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/redirectTag.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp06_jstl/redirectTag.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +57,7 @@
     "Smart Tomcat.Unnamed.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/workspaceWeb/webJSP1/src/main/webapp/image",
+    "last_opened_file_path": "D:/workspaceWeb/webJSP1/src/main/java/com/ict/home",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15234375",
     "project.structure.side.proportion": "0.2",
@@ -74,6 +66,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspaceWeb\webJSP1\src\main\java\com\ict\home" />
+      <recent name="D:\workspaceWeb\webJSP1\src\main\webapp\WEB-INF\lib" />
       <recent name="D:\workspaceWeb\webJSP1\src\main\webapp\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
